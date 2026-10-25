@@ -179,7 +179,8 @@ export const Caption: React.FC<{
   sub?: string;
   start: number;
   end: number;
-}> = ({ text, sub, start, end }) => {
+  bottom?: number;
+}> = ({ text, sub, start, end, bottom = 120 }) => {
   const { opacity, y } = useReveal(start, end);
 
   return (
@@ -187,7 +188,7 @@ export const Caption: React.FC<{
       style={{
         justifyContent: "flex-end",
         alignItems: "flex-start",
-        padding: "0 150px 120px 150px",
+        padding: `0 150px ${bottom}px 150px`,
       }}
     >
       <BottomScrim />
@@ -237,15 +238,24 @@ export const Caption: React.FC<{
   );
 };
 
-export const Badge: React.FC<{ text: string; start: number }> = ({
+export const Badge: React.FC<{ text: string; start: number; end?: number }> = ({
   text,
   start,
+  end,
 }) => {
   const frame = useCurrentFrame();
-  const opacity = interpolate(frame, [start, start + 16], [0, 1], {
+  const inOpacity = interpolate(frame, [start, start + 16], [0, 1], {
     extrapolateLeft: "clamp",
     extrapolateRight: "clamp",
   });
+  const outOpacity =
+    end === undefined
+      ? 1
+      : interpolate(frame, [end - 16, end], [1, 0], {
+          extrapolateLeft: "clamp",
+          extrapolateRight: "clamp",
+        });
+  const opacity = inOpacity * outOpacity;
 
   return (
     <AbsoluteFill

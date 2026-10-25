@@ -1,6 +1,7 @@
 import { AbsoluteFill } from "remotion";
+import { AnchoringCard } from "../components/AnchoringCard";
 import { KenBurns } from "../components/KenBurns";
-import { Badge, Caption, Heading } from "../components/Text";
+import { Badge, Heading } from "../components/Text";
 import { BENGALI_FONT } from "../fonts";
 
 export const Scene3FloatingSolar: React.FC = () => {
@@ -23,7 +24,7 @@ export const Scene3FloatingSolar: React.FC = () => {
       <KenBurns
         src="assets/floating-solar-2.png"
         startFrame={460}
-        durationInFrames={440}
+        durationInFrames={420}
         scaleFrom={1.18}
         scaleTo={1.05}
         xFrom={2.5}
@@ -31,13 +32,17 @@ export const Scene3FloatingSolar: React.FC = () => {
         objectPosition="50% 50%"
         fadeIn={70}
       />
-      <Heading text="ভাসমান সৌরবিদ্যুৎ" start={40} end={860} />
-      <Badge text="ধারণাভিত্তিক চিত্র — বাস্তব প্রকল্প নয়" start={60} />
-      <Caption
-        text="হ্রদের পানির উপর স্থাপিত সৌর প্যানেলের ধারণাগত নকশা"
-        sub="কাপ্তাই হ্রদে এখনও কোনো ভাসমান সৌর প্রকল্প বাস্তবায়িত হয়নি"
-        start={100}
-        end={800}
+      <Heading text="ভাসমান সৌর প্রযুক্তি" start={24} end={850} />
+      <Badge
+        text="ধারণাভিত্তিক চিত্র — বাস্তব প্রকল্প নয়"
+        start={40}
+        end={850}
+      />
+      <AnchoringCard
+        src="assets/Floating panel anchoring and mooring.jpg"
+        label="অ্যাংকারিং ও মুরিং — ধারণাগত চিত্র"
+        start={500}
+        end={858}
       />
     </AbsoluteFill>
   );

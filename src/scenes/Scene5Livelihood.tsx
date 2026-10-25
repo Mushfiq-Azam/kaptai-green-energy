@@ -11,7 +11,7 @@ export const Scene5Livelihood: React.FC = () => {
       <KenBurns
         src="assets/boats-on-kaptai.png"
         startFrame={0}
-        durationInFrames={320}
+        durationInFrames={360}
         scaleFrom={1.05}
         scaleTo={1.15}
         xFrom={0}
@@ -22,7 +22,7 @@ export const Scene5Livelihood: React.FC = () => {
       />
       <KenBurns
         src="assets/fishing-livelihood.png"
-        startFrame={280}
+        startFrame={300}
         durationInFrames={320}
         scaleFrom={1.14}
         scaleTo={1.05}
@@ -35,7 +35,7 @@ export const Scene5Livelihood: React.FC = () => {
       <KenBurns
         src="assets/tourism-boat.png"
         startFrame={560}
-        durationInFrames={235}
+        durationInFrames={286}
         scaleFrom={1.06}
         scaleTo={1.16}
         xFrom={-1.5}
@@ -43,24 +43,27 @@ export const Scene5Livelihood: React.FC = () => {
         objectPosition="50% 50%"
         fadeIn={60}
       />
-      <Heading text="হ্রদ-নির্ভর জীবন ও জীবিকা" start={28} end={770} />
+      <Heading text="হ্রদ-নির্ভর জীবন ও জীবিকা" start={24} end={820} />
       <Caption
-        text="নৌকা ও নৌ-চলাচল"
-        sub="হ্রদ-কেন্দ্রিক যোগাযোগ ও জীবনযাত্রা"
-        start={45}
-        end={270}
+        text="মানুষ ও জীবিকা"
+        sub="বিদ্যুৎ উৎপাদনের বাইরেও প্রভাব"
+        start={36}
+        end={300}
+        bottom={246}
       />
       <Caption
-        text="মাছ ধরা ও স্থানীয় জীবিকা"
-        sub="স্থানীয় অর্থনীতির একটি গুরুত্বপূর্ণ ভিত্তি"
-        start={310}
-        end={540}
+        text="মৎস্য, নৌচলাচল ও পর্যটন"
+        sub="সম্ভাব্য প্রভাবের বিস্তারিত মূল্যায়ন"
+        start={330}
+        end={590}
+        bottom={246}
       />
       <Caption
-        text="পর্যটন ও ভবিষ্যৎ সম্ভাবনা"
-        sub="সমন্বিত পরিকল্পনায় ভারসাম্য জরুরি"
-        start={590}
-        end={775}
+        text="স্থানীয় ও আদিবাসী জনগোষ্ঠী"
+        sub="অংশগ্রহণ, মতামত ও ন্যায্য সুবিধা"
+        start={620}
+        end={820}
+        bottom={246}
       />
     </AbsoluteFill>
   );
